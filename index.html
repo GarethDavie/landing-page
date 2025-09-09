@@ -38,30 +38,11 @@
       transition: background 0.3s;
     }
     
-    .title-block {
-        text-align: center;
-        margin-bottom: 2rem;
-    }
-
-    .title-grid {
-        display: inline-grid;       /* shrink to content, but keep grid behavior */
-        justify-items: stretch;     /* make lines align perfectly left/right */
-    }
-
-    .title-grid .line1 {
-        font-size: clamp(3rem, 10vw, 6.5rem); /* bigger overall */
-        font-weight: 600;
-        line-height: 1;
-        text-transform: lowercase;
-        text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
-    }   
-
-
-    .title-grid .line2 {
-        font-size: 0.36em;       /* scale proportionally to line1 */
-        font-weight: 600;
-        margin-top: -0.1em;      /* adjust vertical spacing in em units */
-        letter-spacing: 0.1em;   /* optional */
+    .logo {
+        max-width: 90%;    /* shrink on smaller screens */
+        height: auto;
+        display: block;
+        margin: 0 auto 2rem;
     }
 
 
@@ -105,14 +86,10 @@
 </head>
 <body>
   <!-- Hero section -->
-  <section class="hero">
-    <div class="title-block">
-        <div class="title-grid">
-          <div class="line1">tonner</div>
-          <div class="line2">artist management</div>
-        </div>
-      </div>
-  </section>
+    <section class="hero">
+        <img src="logo-white.svg" alt="tonner artist management" class="logo">
+    </section>
+
   
   
 
