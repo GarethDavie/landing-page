@@ -37,24 +37,34 @@
       font-weight: bold;
       transition: background 0.3s;
     }
-    .title-block h1,
-    .title-block h2 {
-    margin: 0;          /* kill browser default margins */
-    line-height: 1;     /* keeps text compact */
+    
+    .title-block {
+        text-align: center;
+        margin-bottom: 2rem;
     }
 
-    .title-block h1 {
-    font-size: 8rem;
-    font-weight: 600;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    .title-grid {
+        display: inline-grid;       /* shrink to content, but keep grid behavior */
+        justify-items: stretch;     /* make lines align perfectly left/right */
     }
 
-    .title-block h2 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-top: -0.3rem;  /* pull it upwards, overlapping baseline slightly */
+    .title-grid .line1 {
+        font-size: clamp(3rem, 8vw, 5rem);  /* responsive scaling */
+        font-weight: 600;
+        line-height: 1;
+        text-transform: lowercase;  /* optional: matches "tonner" style */
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
     }
+
+    .title-grid .line2 {
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
+        font-weight: 600;
+        margin-top: -0.2rem;        /* tight lockup */
+        letter-spacing: 2px;
+        line-height: 1;
+        text-transform: uppercase;  /* optional: gives "artist management" logo feel */
+    }
+
 
     /* Content section */
     .content {
@@ -98,11 +108,14 @@
   <!-- Hero section -->
   <section class="hero">
     <div class="title-block">
-      <h1>tonner</h1>
-      <h2>artist management</h2>
-    </div>
+        <div class="title-grid">
+          <div class="line1">tonner</div>
+          <div class="line2">artist management</div>
+        </div>
+      </div>      
     <a href="mailto:youremail@example.com">Contact Me</a>
   </section>
+  
   
 
 
