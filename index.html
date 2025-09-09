@@ -15,34 +15,39 @@
       color: #333;
     }
 
-    /* Hero section with background */
     .hero {
-      height: 100vh;
-      background: url('GD-0688.png') no-repeat center center/cover;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      padding: 2rem;
+        height: 100vh;
+        background: url('GD-0688.png') no-repeat center center/cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        padding: 2rem;
     }
 
-    .hero a {
-      background: rgba(0,0,0,0.6);
-      color: #fff;
-      text-decoration: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    
     .logo {
-        max-width: 90%;    /* shrink on smaller screens */
+        max-width: 70%;
         height: auto;
         display: block;
-        margin: 0 auto 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-email {
+        font-family: 'Lexend', sans-serif;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-email a {
+        color: white;           /* make it visible on the background */
+        text-decoration: none;  /* remove underline */
+        transition: opacity 0.3s;
+    }
+
+    .hero-email a:hover {
+        opacity: 0.7;           /* subtle hover effect */
     }
 
     /* Content section */
