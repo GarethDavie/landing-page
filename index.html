@@ -2,36 +2,113 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact Me</title>
+  <title>Gareth Davie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { 
-      font-family: sans-serif; 
-      display: flex; 
-      justify-content: center; 
-      align-items: center; 
-      height: 100vh; 
-      background: #f9f9f9; 
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
     }
-    .card {
-      text-align: center; 
-      background: white; 
-      padding: 2rem; 
-      border-radius: 1rem; 
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+    /* Hero section with background */
+    .hero {
+      height: 100vh;
+      background: url('GD-0688.png') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 2rem;
     }
-    h1 { margin-bottom: 1rem; }
-    a { 
-      color: #0077cc; 
-      text-decoration: none; 
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    }
+
+    .hero a {
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
       font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .hero a:hover {
+      background: rgba(0,0,0,0.8);
+    }
+
+    /* Content section */
+    .content {
+      max-width: 1000px;
+      margin: auto;
+      padding: 3rem 1rem;
+    }
+
+    .card {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .card img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .card-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .card-text h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .card { flex-direction: column; text-align: center; }
     }
   </style>
 </head>
 <body>
-  <div class="card">
+  <!-- Hero section -->
+  <section class="hero">
     <h1>👋 Hi, I'm Nicole</h1>
-    <p>Get in touch at:</p>
-    <p><a href="nicole@tonnerartistmanagement.com">nicole@tonnerartistmanagement.com</a></p>
-  </div>
+    <a href="nicole@tonnerartistmanagement">Contact Me</a>
+  </section>
+
+  <!-- Content section -->
+  <section class="content">
+    <div class="card">
+      <img src="image1.jpg" alt="Description 1">
+      <div class="card-text">
+        <h2>Project / Thing 1</h2>
+        <p>This is a description of the first image. You can explain what it represents, or say something personal here.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="image2.jpg" alt="Description 2">
+      <div class="card-text">
+        <h2>Project / Thing 2</h2>
+        <p>This is the second description. It looks nice with the image next to it, and stacks on mobile.</p>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
