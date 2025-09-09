@@ -28,12 +28,6 @@
       padding: 2rem;
     }
 
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
-    }
-
     .hero a {
       background: rgba(0,0,0,0.6);
       color: #fff;
@@ -43,27 +37,23 @@
       font-weight: bold;
       transition: background 0.3s;
     }
-
-    .hero a:hover {
-      background: rgba(0,0,0,0.8);
-    }
-
-    .title-block {
-        text-align: center;
-        margin-bottom: 2rem;
+    .title-block h1,
+    .title-block h2 {
+    margin: 0;          /* kill browser default margins */
+    line-height: 1;     /* keeps text compact */
     }
 
     .title-block h1 {
-        font-size: 5rem;
-        font-weight: 600; 
-        line-height: 1.1;
+    font-size: 5rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
     }
 
     .title-block h2 {
-        font-size: 1.8rem;
-        font-weight: 600;
-        margin-top: -0.2rem;
-        letter-spacing: 1px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: -0.3rem;  /* pull it upwards, overlapping baseline slightly */
     }
 
     /* Content section */
